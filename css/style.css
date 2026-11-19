@@ -678,3 +678,10 @@ textarea:focus-visible {
   }
 }
 
+.product-output {
+  padding: 16px;
+  overflow-x: auto;
+  color: #f9fafb;
+  background-color: #111827;
+  border-radius: 8px;
+}
