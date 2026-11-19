@@ -186,10 +186,8 @@ if (productOutputElement) {
 }
 */
 
-console.log('Файл main.js подключён');
-console.log(products);
-console.table(products);
 
+/*
 function getProductTitles(products) {
   return products.map((product) => product.title);
 }
@@ -289,3 +287,5 @@ if (productOutputElement) {
     `Результатов поиска "плитка": ${searchProducts(products, 'плитка').length}`
   ].join('\n');
 }
+
+*/
