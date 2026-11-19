@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
 </head>
+
 <body>
   <a class="skip-link" href="#main">Перейти к основному содержимому</a>
 
@@ -17,7 +19,8 @@
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
           <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html">Каталог</a>
+          </li>
           <li class="site-nav__item"><a class="site-nav__link" href="product.html">Товар</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
           <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
@@ -42,79 +45,60 @@
     </section>
 
     <section class="catalog-layout">
+
       <aside class="catalog-filters">
         <h2 class="catalog-filters__title">Фильтры</h2>
 
-        <form class="filters-form" action="#" method="get">
+        <section class="catalog-controls" aria-label="Управление каталогом"
+          style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 20px;">
+
+
+          <fieldset class="filters-form__group">
+            <legend class="filters-form__legend">Поиск товара</legend>
+            <input id="catalog-search" class="filters-form__input" style="width: 100%;" type="search"
+              placeholder="Введите название..." autocomplete="off">
+          </fieldset>
+
+
           <fieldset class="filters-form__group">
             <legend class="filters-form__legend">Категория</legend>
-
-            <label class="filters-form__label">
-              <input type="checkbox" name="category" value="all"> Все товары
-            </label>
-            <label class="filters-form__label">
-              <input type="checkbox" name="category" value="popular"> Популярные
-            </label>
-            <label class="filters-form__label">
-              <input type="checkbox" name="category" value="new"> Новинки
-            </label>
+            <select id="category-filter" class="filters-form__input" style="width: 100%;">
+              <option value="all">Все категории</option>
+              <option value="building">Стройматериалы</option>
+              <option value="tools">Инструменты</option>
+              <option value="food product">Продукты</option>
+            </select>
           </fieldset>
+
 
           <fieldset class="filters-form__group">
-            <legend class="filters-form__legend">Цена</legend>
-            <label class="filters-form__label" for="price-from">От</label>
-            <input class="filters-form__input" id="price-from" name="price-from" type="number" min="0" placeholder="0">
-            <label class="filters-form__label" for="price-to">До</label>
-            <input class="filters-form__input" id="price-to" name="price-to" type="number" min="0" placeholder="11111">
+            <legend class="filters-form__legend">Сортировка</legend>
+            <select id="sort-select" class="filters-form__input" style="width: 100%;">
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Сначала дешевле</option>
+              <option value="price-desc">Сначала дороже</option>
+              <option value="title-asc">По названию А-Я</option>
+            </select>
           </fieldset>
 
-          <button class="button button--primary" type="submit">Применить</button>
-        </form>
+        </section>
       </aside>
 
+
       <section class="catalog-products">
+
+
+        <p class="catalog-count" aria-live="polite"></p>
+        <p class="catalog-empty" hidden>По выбранным условиям товары не найдены.</p>
+
+        <!-- Твой заголовок и контейнер -->
         <h2 class="section__title">Список товаров</h2>
-
-        <div class="products-grid">
-          <article class="product-card product-card--featured">
-            <span class="product-card__badge">Хит</span>
-            <img src="img/tovar1.png" srcset="img/tovar1.png 480w,
-          img/tovar1.png 640w,
-          img/tovar1.png 960w" sizes="(max-width: 639px) 100vw,
-         (max-width: 1023px) 50vw,
-         33vw" alt="Товар 1" width="640" height="480" loading="lazy" class="product-card__image">
-            <h3 class="product-card__title">Кирпич</h3>
-            <p class="product-card__description">Бомбовый красный КИРПИЧ</p>
-            <p class="product-card__price">Цена: 111 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card">
-            <img src="img/tovar2.png" srcset="img/tovar1.png 480w,
-          img/tovar2.png 640w,
-          img/tovar2.png 960w" sizes="(max-width: 639px) 100vw,
-         (max-width: 1023px) 50vw,
-         33vw" alt="Товар 2" width="640" height="480" loading="lazy" class="product-card__image">
-            <h3 class="product-card__title">Керамогранитная плитка</h3>
-            <p class="product-card__description">Мансардное окно, чтобы с кайфом смотреть на звёзды.</p>
-            <p class="product-card__price">Цена: 1111 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
-
-          <article class="product-card product-card--discount">
-            <span class="product-card__badge product-card__badge--sale">Скидка</span>
-            <img src="img/tovar3.jpg" srcset="img/tovar1.png 480w,
-          img/tovar3.jpg 640w,
-          img/tovar3.jpg 960w" sizes="(max-width: 639px) 100vw,
-         (max-width: 1023px) 50vw,
-         33vw" alt="Товар 3" width="640" height="480" loading="lazy" class="product-card__image">
-            <h3 class="product-card__title">Набор инструментов</h3>
-            <p class="product-card__description">Полноценный набор инструментов для настоящего мужика</p>
-            <p class="product-card__price">Цена: 1111 руб.</p>
-            <a class="button button--primary product-card__button" href="product.html">Подробнее</a>
-          </article>
+        <p id="cart-message" style="color: green; font-weight: bold; margin-bottom: 15px;"></p>
+        <div class="products-grid" data-products-container>
+          <!-- Сюда JS вставит карточки -->
         </div>
       </section>
+
     </section>
   </main>
 
@@ -125,5 +109,8 @@
 
   <button class="to-top" id="to-top" type="button" aria-label="Наверх">↑</button>
 
+  <script src="js/data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
 </body>
+
 </html>

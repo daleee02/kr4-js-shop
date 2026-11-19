@@ -1,15 +1,3 @@
-/*
-const product = {
-  id: 1,
-  title: 'Кофемашина Barista Home',
-  category: 'kitchen',
-  price: 19990,
-  discountPercent: 10,
-  rating: 4.7,
-  isAvailable: true
-};
-*/
-
 const products = [
   {
     id: 1,
@@ -18,7 +6,9 @@ const products = [
     price: 111,
     discountPercent: 0,
     rating: 4.9,
-    isAvailable: true
+    isAvailable: true,
+    image: 'img/tovar1.jpg', 
+    description: 'Бомбовый красный КИРПИЧ'
   },
   {
     id: 2,
@@ -27,7 +17,9 @@ const products = [
     price: 1111,
     discountPercent: 0,
     rating: 4.5,
-    isAvailable: true
+    isAvailable: true,
+    image: 'img/tovar2.png', 
+    description: 'Красивая, шикарная плитка'
   },
   {
     id: 3,
@@ -36,7 +28,9 @@ const products = [
     price: 1111,
     discountPercent: 15,
     rating: 4.8,
-    isAvailable: true
+    isAvailable: true,
+    image: 'img/tovar3.jpg', 
+    description: 'Полноценный набор инструментов для настоящего мужика'
   },
   {
     id: 4,
@@ -45,7 +39,8 @@ const products = [
     price: 1500,
     discountPercent: 0,
     rating: 4.4,
-    isAvailable: false
+    isAvailable: false,
+    image: 'img/tovar4.jpg'
   },
   {
     id: 5,
@@ -54,16 +49,19 @@ const products = [
     price: 40,
     discountPercent: 0,
     rating: 4.8,
-    isAvailable: false
+    isAvailable: true,
+    image: 'img/tovar5.webp', 
+    description: 'Жвачечка вкусненькая'
   },
   {
     id: 6,
-    title: 'Скотч',
+    title: 'Скотч малярный',
     category: 'tools',
     price: 270,
     discountPercent: 0,
     rating: 4.6,
-    isAvailable: false
+    isAvailable: false,
+    image: 'img/tovar6.jpg'
   },
   {
     id: 7,
@@ -72,7 +70,8 @@ const products = [
     price: 450,
     discountPercent: 0,
     rating: 4.6,
-    isAvailable: true
+    isAvailable: true,
+    image: 'img/tovar7.jpg'
   },
   {
     id: 8,
@@ -81,7 +80,8 @@ const products = [
     price: 8990,
     discountPercent: 10,
     rating: 4.9,
-    isAvailable: true
+    isAvailable: true,
+    image: 'img/tovar8.png'
   },
   {
     id: 9,
@@ -90,7 +90,8 @@ const products = [
     price: 650,
     discountPercent: 0,
     rating: 4.3,
-    isAvailable: true
+    isAvailable: true,
+    image: 'img/tovar9.jpg'
   },
   {
     id: 10,
@@ -99,6 +100,7 @@ const products = [
     price: 750,
     discountPercent: 5,
     rating: 4.5,
-    isAvailable: false
+    isAvailable: false,
+    image: 'img/tovar10.jpg'
   }
 ];
